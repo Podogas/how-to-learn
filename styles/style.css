@@ -1,31 +1,275 @@
 .page {
-    min-width: 1100px;
-    /* мы ещё не умеем делать мобильную версию сайта, */
-    /* поэтому выше установлена минимальная ширина страницы */
-    max-width: 1600px;
-    /* выше установили ограничение по максимальной ширине */
-    margin: 0 auto;
-    /* выше для экранов больше 1600px отцентрировали весь контент */
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+  min-width: 1100px;
+  max-width: 1600px;
+  margin: 0 auto;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
 }
+.logo {
+  background-image: url(../images/logo.svg);
+  width: 183px;
+  height: 32px;
+}
+
+/* header */
 
 .header {
-    height: 100vh;
-    min-height: 600px;
-    max-height: 756px;
-    /* выше установили ограничения для секции */
+  height: 100vh;
+  min-height: 600px;
+  max-height: 756px;
+  display: flex;
+  /* здесь я решил использовать padding потому что это сократит код */  
+  padding-left: 64px;
+  background-color:#F2F2F2;
+  position: relative;
 }
-
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+.logo_place_header {
+  position: absolute;
+  top: 30px;
+  left: 64px;
+  z-index: 1;
+}
+.header__title  {
+  align-self: center;
+  width: 730px;
+  line-height: 96px;
+  font-size: 102px;
+  font-weight: 600;
+  z-index: 1;
+}
+.header__subtitle {
+  position: absolute;
+  bottom: 30px;
+  left: 64px;
+  width: 388px;
+  z-index: 1;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: 400;
+}
+.header__link {
+  color: #2F80ED;
+}
+.header__main-illustration {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 765px;
+  height: 608px;
+}
 .header__square-pic {
-    height: 568px;
-    width: 568px;
+  position: absolute;
+  top: 64px;
+  right: 0;
+  min-height: 536px; 
+  max-height: 568px;
+  /* тут я решил использовать max и min height т.к header ограничен min-height в 600px в то время как 568(ширина) + 64(позиция от верха) = 632  */
+  width: 568px;
+  background-color: #2F80ED;
 }
 
-/* и элемента с модификатором вида ключ-значение */
-.table__cell_theme_dark {
-    width: 200px;
-    color: white;
-    margin-right: 0;
-    margin-top: 80px;
+/* description */
+
+.description  {
+  margin: 100px 0;
+ }
+.two-columns {
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
 }
+.two-columns__brief {
+  width: 175px;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #2F80ED;
+}
+.two-columns__main-text {
+  width: 80%;
+  min-width: 784px;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: 400; 
+}
+.two-columns__paragraph:first-child {
+  margin:0 0 15px 0;
+}
+.two-columns__paragraph:last-child  {
+  margin: 15px 0 0 0;
+}
+.two-columns__paragraph:not(:first-child):not(:last-child) {
+  margin: 15px 0;
+/* возможно это немного кривая конструкция, но я захотел предусмотреть возможность добавления параграфов  */
+}
+.two-columns__span-accent {
+  font-weight: 600;
+}
+
+/* digits */
+
+.digits {
+  margin: 100px 0;
+  /* дублировал margin так как секция (должна быть?!) независимой от контекста хотя и без верхнего отступа все бы выглядело бы также. */
+}
+.section-title {
+  width: 60%;
+  margin:0 auto 20px auto;
+  text-align: center;
+  line-height: 69px;
+  font-size: 60px;
+  font-weight: 600;
+}
+.section-subtitle {
+  width: 60%;
+  text-align: center;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0 auto;
+}
+.table {
+  width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.table__row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+.table__cell {
+  width: 250px;
+}
+.table__heading {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+}
+.table__text , .table__text_source  {
+  margin: 20px 0;
+  font-style: normal;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* feinman */
+  
+.feinman {
+  position: relative;
+  min-height: 790px;
+  background: #F2F2F2 url('../images/feinman.png') no-repeat 0% 100%;
+  background-size: 867px 637px;
+  padding-top: 100px;
+  text-align: center;
+}
+.feinman__title {
+  width: 648px;
+  margin: 0 auto 70px auto;
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: 600;
+}
+.feinman__subtitle {
+  margin: 0 auto;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: 400;
+}
+.feinman__link {
+  position: absolute;
+  top: 50%;
+  right: 48px;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: 400;
+} 
+
+/* kaufman */
+
+.kaufman  {
+  padding: 90px 0;
+  color: #FFF;
+  background:  url('../images/triangle.svg') #1F1F1F no-repeat top right -210px;
+  background-size: 877px 877px;
+}
+.table__row_theme_dark {
+  margin-top: 80px;
+}
+.table__cell_theme_dark {
+  width: 200px;
+}
+
+/* footer */
+
+.footer {
+  background-color: #1F1F1F;
+  color: #FFF;
+  padding: 60px 0 40px 0;
+  min-height: 350px;
+  display: flex;
+}
+.footer__columns {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+}
+.footer__column_content_copyright{
+  display: flex;
+  flex-basis: 711px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.logo_place_footer  {
+  background-image: url(../images/logo_white.svg);
+  width: 183px;
+  height: 35px; 
+}
+.footer__author {
+  margin: 18px 0;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: 400;
+}
+.footer__column_wrap  {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: baseline;
+  /* мне не нравится это решение, но я не смог найти ничего лучше */
+}
+.footer__column_content_info  {
+  flex: 1;
+  text-align: right;
+}
+.footer__column_content_social  {
+  flex: 1;
+  text-align: right;
+}
+.footer__column-heading {
+  margin-bottom: 20px;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.footer__column-links {
+  display: block;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 400;
+}
+.footer__column-links:last-child {
+  margin-bottom: 16px;
+}
+.footer__social-icon  {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+
+
