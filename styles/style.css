@@ -9,6 +9,10 @@
   width: 183px;
   height: 32px;
 }
+.link {
+  text-decoration: none; 
+  color: inherit;
+}
 
 /* header */
 
@@ -21,6 +25,7 @@
   padding-left: 64px;
   background-color:#F2F2F2;
   position: relative;
+  overflow: hidden;
 }
 .logo_place_header {
   position: absolute;
@@ -40,6 +45,7 @@
   position: absolute;
   bottom: 30px;
   left: 64px;
+  margin: 0;
   width: 388px;
   z-index: 1;
   line-height: 25px;
@@ -61,8 +67,7 @@
   top: 64px;
   right: 0;
   min-height: 536px; 
-  max-height: 568px;
-  /* тут я решил использовать max и min height т.к header ограничен min-height в 600px в то время как 568(ширина) + 64(позиция от верха) = 632  */
+  height: 568px;
   width: 568px;
   background-color: #2F80ED;
 }
@@ -81,6 +86,7 @@
 }
 .two-columns__brief {
   width: 175px;
+  margin: 0;
   font-size: 18px;
   line-height: 1.2;
   font-weight: 400;
@@ -93,15 +99,11 @@
   font-size: 24px;
   font-weight: 400; 
 }
-.two-columns__paragraph:first-child {
-  margin:0 0 15px 0;
+.two-columns__paragraph {
+  margin:0 0 30px 0;
 }
 .two-columns__paragraph:last-child  {
-  margin: 15px 0 0 0;
-}
-.two-columns__paragraph:not(:first-child):not(:last-child) {
-  margin: 15px 0;
-/* возможно это немного кривая конструкция, но я захотел предусмотреть возможность добавления параграфов  */
+  margin: 0;
 }
 .two-columns__span-accent {
   font-weight: 600;
@@ -115,11 +117,13 @@
 }
 .section-title {
   width: 60%;
+  position: relative;
   margin:0 auto 20px auto;
   text-align: center;
   line-height: 69px;
   font-size: 60px;
   font-weight: 600;
+  z-index: 1;
 }
 .section-subtitle {
   width: 60%;
@@ -129,20 +133,19 @@
   font-weight: 400;
   margin: 0 auto;
 }
-.table {
+ .table {
   width: 1100px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;          
   margin: 0 auto;
-}
-.table__row {
-  width: 100%;
-  display: flex;
+  padding: 0;
+  list-style: none;
   justify-content: space-between;
-  margin-top: 60px;
-}
+} 
 .table__cell {
+  margin-top: 60px;
   width: 250px;
+  padding: 0;
 }
 .table__heading {
   margin: 0;
@@ -150,7 +153,7 @@
   font-size: 24px;
   font-weight: 600;
 }
-.table__text , .table__text_source  {
+.table__text {
   margin: 20px 0;
   font-style: normal;
   line-height: 1.2;
@@ -162,7 +165,7 @@
   
 .feinman {
   position: relative;
-  min-height: 790px;
+  height: 790px;
   background: #F2F2F2 url('../images/feinman.png') no-repeat 0% 100%;
   background-size: 867px 637px;
   padding-top: 100px;
@@ -193,16 +196,27 @@
 /* kaufman */
 
 .kaufman  {
+  position: relative; 
   padding: 90px 0;
   color: #FFF;
-  background:  url('../images/triangle.svg') #1F1F1F no-repeat top right -210px;
-  background-size: 877px 877px;
+  background-color: #1F1F1F;
+  overflow: hidden; 
+  /* добавил, потому что блок с треугольником закрывал собой ссылки в footer, и они становились не кликабельными */
 }
-.table__row_theme_dark {
-  margin-top: 80px;
-}
+.kaufman__triangle  {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 877px;
+  height: 877px; 
+  background: url(../images/triangle.svg) no-repeat;
+  background-position: right -210px top;
+  background-size: cover;
+} 
 .table__cell_theme_dark {
   width: 200px;
+  margin-top: 80px;
+  z-index: 1;
 }
 
 /* footer */
@@ -218,6 +232,7 @@
   display: flex;
   width: 90%;
   margin: 0 auto;
+  justify-content: space-between;
 }
 .footer__column_content_copyright{
   display: flex;
@@ -236,40 +251,41 @@
   font-size: 18px;
   font-weight: 400;
 }
-.footer__column_wrap  {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: baseline;
-  /* мне не нравится это решение, но я не смог найти ничего лучше */
-}
-.footer__column_content_info  {
-  flex: 1;
-  text-align: right;
-}
-.footer__column_content_social  {
-  flex: 1;
-  text-align: right;
-}
 .footer__column-heading {
-  margin-bottom: 20px;
+  margin:0 0 20px 0;
   line-height: 30px;
   font-size: 18px;
   font-weight: 600;
 }
 .footer__column-links {
-  display: block;
+  list-style: none;
   line-height: 30px;
   font-size: 18px;
   font-weight: 400;
-}
-.footer__column-links:last-child {
-  margin-bottom: 16px;
+  padding: 0;
+  margin: 20px 0 16px 0;
 }
 .footer__social-icon  {
+  display: inline-block;
   width: 16px;
   height: 16px;
   margin-right: 10px;
 }
+.footer__social-icon_facebook {
+  background: url(../images/facebook_white.svg) no-repeat;
+  background-size: contain;
+  /* в прошлый раз было замечание что иконки не отображаются, путь был тот же самый, и у меня они отображались, если и сейчас у вас не будут отбражаться, то я не знаю в чем дело,
+  путь верный (точно такой же как и в других изображениях), у меня отображается */
+}
+.footer__social-icon_vk {
+  background: url(../images/vk_white.svg) no-repeat;
+  background-size: contain;
+}
+.footer__social-icon_instagram  {
+  background: url(../images/instagram_white.svg) no-repeat;
+  background-size: contain;
+}
+
 
 
 

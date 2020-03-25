@@ -347,16 +347,3 @@ template {
 [hidden] {
   display: none;
 }
-
-/* Ниже то что я считаю стилями которые должны находиться в normalize */
-.link {
-  text-decoration: none; 
-  color: inherit;
-}
-/* ни одной подчеркнутой ссылки на странице нету, поэтому я решил вывести это правило сюда */
-h1, h2, h3 {
-  margin: 0;
-}
-td {
-  padding: 0;
-}
