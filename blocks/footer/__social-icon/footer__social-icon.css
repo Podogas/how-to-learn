@@ -1,0 +1,10 @@
+@import url('./_facebook/footer__social-icon_facebook.css');
+@import url('./_instagram/footer__social-icon_instagram.css');
+@import url('./_vk/footer__social-icon_vk.css');
+
+.footer__social-icon  {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
