@@ -1,4 +1,7 @@
+.video__iframe  {
+    border: 0;
+}
+
 .video__iframe:not(:last-child)  {
-  border: 0;
   margin-right: 20px;
 }
