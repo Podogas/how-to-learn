@@ -15,5 +15,4 @@
   height: 877px; 
   background: url(../../../images/triangle.svg) no-repeat;
   background-size: cover;
-  animation: triangle-rotation 20s linear infinite;
 } 

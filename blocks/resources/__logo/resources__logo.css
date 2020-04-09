@@ -1,12 +1,4 @@
-@import url('./_content/resources__logo_content_arzamas.css');
-@import url('./_content/resources__logo_content_n1.css');
-@import url('./_content/resources__logo_content_polka.css');
-@import url('./_content/resources__logo_content_strelka.css');
-
 .resources__logo  {
   width: 270px;
   height: 38px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }

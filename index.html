@@ -7,8 +7,6 @@
 	<meta name="author" content="Александр Подогас">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-	<!-- <link rel="stylesheet" href="styles/animation.css"> -->
-  <!--  не уверен что анимация идет отдельным файлом, но подумал что это логичнее -->
   <link rel="stylesheet" href="pages/index.css">
 	<title>Научиться учиться</title>
 </head>
@@ -23,7 +21,7 @@
     	<p class="header__subtitle">Какие современные и эффективные подходы к обучению вы можете использовать в своей жизни?
     		<a href="#methods-of-learning" class="link header__link">Узнать &rarr;</a>
     	</p>
-      <div class="header__square-pic"></div>
+      <div class="header__square-pic rotation__square-pic"></div>
     	<img src="images/two_again.png" alt="Опять двойка" class="header__main-illustration">
 		</header>
 
@@ -56,35 +54,35 @@
         <p class="section-subtitle">Пять практик от Барбары Оакли</p>
         <ul class="cards">
           <li class="cards__item">
-            <div class="cards__image cards__image_content_attention"></div>
+            <img src="./images/attention.png" alt="книга Брианны Вест 101 эссе которые поменяют ход ваших мыслей" class="cards__image">
             <h3 class="cards__title">Два вида внимания</h3>
             <p class="cards__description">
               Глубокие знания возникают, если чередовать сфокусированное и рассеянное мышление.
             </p>
           </li>
           <li class="cards__item">
-            <div class="cards__image cards__image_content_recall"></div>
+            <img src="./images/recall.png" alt="скульптура юноши с трубочкой в руке" class="cards__image">
             <h3 class="cards__title">Recall</h3>
             <p class="cards__description">
               Вспоминайте изученное — это позволит соединить разрозненные порции памяти.
             </p>
           </li>
           <li class="cards__item">
-            <div class="cards__image cards__image_content_interliving"></div>
+            <img src="./images/interliving.png" alt="национальный мемориал и музей 11 сентября" class="cards__image">
             <h3 class="cards__title">Интерливинг</h3>
             <p class="cards__description">
               Изучайте несколько навыков одновременно, они обогащают друг друга.
             </p>
           </li>
           <li class="cards__item">
-            <div class="cards__image cards__image_content_question"></div>
+            <img src="./images/question.png" alt="муниципальная библиотека города Штуттгарт в Германии" class="cards__image">
             <h3 class="cards__title">Вопросы</h3>
             <p class="cards__description">
               Слушая преподавателя, придумывайте хороший вопрос, который вас действительно волнует.
             </p>
           </li>
           <li class="cards__item">
-            <div class="cards__image cards__image_content_competence"></div>
+            <img src="./images/competence.png" alt="стопка книг на руке человека" class="cards__image">
             <h3 class="cards__title">Иллюзия компетентности</h3>
             <p class="cards__description">
               Повторите про себя, запишите, расскажите другу: вам только кажется, что вы владеете новой темой.
@@ -100,8 +98,8 @@
         <h2 class="section-title">Видео нa TED</h2>
         <p class="section-subtitle">Для тех, кто любит прокрастинировать</p>
         <div class="video__iframes">
-          <iframe class="video__iframe" width="515" height="316" src="https://www.youtube.com/embed/5MgBikgcWnY" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <iframe class="video__iframe" width="515" height="316" src="https://www.youtube.com/embed/arj7oStGLkU" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe class="video__iframe" src="https://www.youtube.com/embed/5MgBikgcWnY" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe class="video__iframe" src="https://www.youtube.com/embed/arj7oStGLkU" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </section>
 
@@ -193,7 +191,7 @@
     <!-- kaufman -->
 
 			<section class="kaufman">
-        <div class="kaufman__triangle"></div>
+        <div class="kaufman__triangle rotation__triangle"></div>
         <h2 class="section-title section-title_theme_dark">Принципы обучения</h2>
         <p class="section-subtitle section-subtitle_theme_dark">от Джоша Кауфмана</p>
         <ul class="table table_theme_dark"> 
@@ -247,12 +245,28 @@
       <section class="resources">
         <h2 class="section-title">Полезные ресурсы</h2>
         <p class="section-subtitle">Больше материалов о техниках и лайфхаках</p>
-        <div class="resoureces__logo-zone">
-          <div class="resources__logo resources__logo_content_arzamas"></div>
-          <div class="resources__logo resources__logo_content_n1"></div>
-          <div class="resources__logo resources__logo_content_strelka"></div>
-          <div class="resources__logo resources__logo_content_polka"></div>
-        </div>
+        <ul class="resoureces__logo-zone">
+          <li>  
+            <a href="https://arzamas.academy/" class="link">
+              <img src="./images/arzamas.svg" alt="логотип журнала arzamas"  class="resources__logo">
+            </a>
+          </li>
+          <li>    
+            <a href="https://nplus1.ru/" class="link">
+              <img src="./images/n1.svg" alt="логотип портала n+1" class="resources__logo">
+            </a>
+          </li>
+          <li>    
+            <a href="https://strelka.com/ru/home" class="link">
+              <img src="./images/strelka.svg" alt="логотип института стрелка" class="resources__logo">
+            </a> 
+          </li>
+          <li>     
+            <a href="https://polka.academy/" class="link">          
+              <img src="./images/polka.svg" alt="логотип портала полка" class="resources__logo">
+            </a>  
+          </li>
+        </ul>
       </section>
     </main>
 

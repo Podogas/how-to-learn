@@ -16,5 +16,4 @@
   width: 568px;
   background-color: #2F80ED;
   transform: rotate(-15deg);
-  animation: square-rotation 20s linear infinite;
 }
