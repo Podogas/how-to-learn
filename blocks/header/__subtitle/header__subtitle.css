@@ -3,7 +3,7 @@
   bottom: 30px;
   left: 64px;
   margin: 0;
-  width: 388px;
+  max-width: 388px;
   z-index: 1;
   line-height: 25px;
   font-size: 18px;
