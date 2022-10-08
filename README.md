@@ -1,6 +1,6 @@
 # [Научиться учиться](https://podogas.github.io/how-to-learn/)
 
-![Project preview](/how-ti-learn_preview.png)
+![Project preview](/how-to-learn_preview.png)
 
 ## Описание:
 Это моя первая полноценно(нет) сверстанная страница.
