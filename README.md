@@ -1,42 +1,34 @@
-# [Научиться учиться](https://podogas.github.io/how-to-learn/)
+# [How to learn](https://podogas.github.io/how-to-learn/)
 
 ![Project preview](/how-to-learn_preview.png)
 
-## Описание:
-Это моя первая полноценно(нет) сверстанная страница.
-Она выполнена по брифу в котором указаны размеры, названия блоков и элементов, а так же прочие полезные вещи, вроде намёков на частые ошибки, способы реализации и прочее.
+## Description:
+This was the first training project of Yandex practicum courses.
+This page was grounded on project brief in which we have got sizes, names of blocks and elements, and other helpful information such as hints about common mistakes, methods to use, and so on.
+This is a simple single html page without any functionality, except that you can click on links and spectate on rotating triangle
 
-Это довольно простая страница практически без функционала, разве что можно кликнуть на ссылки и посмотреть на крутящиеся фигуры. Однако благодаря работе над этой страницей я усвоил много важных базовых вещей таких как:
-* Разметка HTML страницы
-  * Некоторые метатэги и оформление Head в целом
-  * Семантические тэги html5 такие как header footer section nav cite.
-  * Оформление разметки и приведение её к удобному для восприятия виду.
-* Поведение элементов в потоке
-  * свойство position и поведение элементов в зависимости от значения
-  * свойство display и поведение элементов в зависимости от значения
-  * Отступы и границы.
-  * Переполнение блоков
+
+However, in the process of completing this task, I have learned a lot of important basic things such as:
+* HTML markdown
+  * Some metatags and Head tag functions.
+  * Semantic html5 elements such as: header footer section nav cite.
+  * Human friendly Html formatting.
+* HTML flow
+  * position property and elements behavior with different values. 
+  * display property 
+  * Margin/padding/border.
+  * Element's overflow
 * CSS
-  * Семейство шрифтов
-  * Импорт
-  * Выравнивание
-  * Z-index
-  * Использование псевдо-классов и псевдо-селекторов
-* Азы методологии БЭМ
-## На этой странице я использовал следующие технологии и методологии:
+  * Font-family
+  * import
+  * alignment
+  * z-index
+  * pseudo-classes and pseudo-elements
+* BEM class naming convention
+## In this project I was using following technologies and methods:
 * flexbox
 * grid-layout
-* Анимации и трансформации
-* Именование классов по БЭМ
-* Файловая структура по БЭМ
-## Планы по доработке проекта.
-- [ ] Сделать страницу кроссбраузерной :pushpin: 
-- - [ ] добавить префиксы
-- - [ ] проверить страницу на всех основных браузерах
-- [ ] Добавить форму для получения комментариев на почту :pushpin: 
-- - [x] убедиться в бессмысленности этой затеи
-- [ ] Сделать мобильную версию :pushpin: 
-- - [ ] сделать фигуры с помощью css
-- - [ ] облегчить вес файлов
-- - [ ] создать макет мобильной версии
-- - [ ] сверстать его
+* Animation and transform
+* BEM naming
+* BEM file structure
+
