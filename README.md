@@ -9,7 +9,7 @@ This is a simple single html page without any functionality, except that you can
 
 
 However, in the process of completing this task, I have learned a lot of important basic things such as:
-* HTML markdown
+* HTML
   * Some metatags and Head tag functions.
   * Semantic html5 elements such as: header footer section nav cite.
   * Human friendly Html formatting.
